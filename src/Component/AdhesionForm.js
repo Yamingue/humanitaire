@@ -10,7 +10,7 @@ function AdhesionForm(props) {
         <Card style={{
             marginBottom: 10,
             marginTop: 20,
-            width: '50%',
+            width: '90%',
         }}>
             <CardContent>
                 <form>

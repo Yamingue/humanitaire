@@ -5,13 +5,14 @@ import PersonCard from "./Component/PersonCard";
 import { Container, Grid } from "@material-ui/core";
 import Mission from "./Component/Mission";
 import ContactForm from "./Component/ContactForm";
+import AdhesionForm from "./Component/AdhesionForm";
 
 function App() {
   return (
     <>
       <NavBar />
       <img src={IMG1}
-      alt={"humanitaire"}
+        alt={"humanitaire"}
         style={{
           width: '100%',
           height: 300,
@@ -99,6 +100,8 @@ function App() {
         </Grid>
         <Titre text="Contact" id="contact" size={90} />
         <ContactForm />
+        <Titre text="Adhesion" id="adhesion" size={105} />
+        <AdhesionForm />
       </Container>
     </>
   );

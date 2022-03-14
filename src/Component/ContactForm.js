@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, TextField } from "@material-ui/core";
+import { Button, Card, CardContent, Grid, Icon, TextField } from "@material-ui/core";
 
 function ContactForm(props) {
     return <Grid
@@ -17,6 +17,13 @@ function ContactForm(props) {
                     <TextField style={{width:'100%', marginBottom:15}} variant='outlined' label="Nom Complet"/>
                     <TextField style={{width:'100%', marginBottom:15}} variant='outlined' label="Email ou telephone"/>
                     <TextField multiline minRows={4} type={'text'} style={{width:'100%', marginBottom:15}} variant='outlined' label="Commentaire"/>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        endIcon={<Icon>send</Icon>}
+                    >
+                        Envoyer
+                    </Button>
                 </form>
             </CardContent>
         </Card>
