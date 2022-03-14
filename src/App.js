@@ -11,6 +11,7 @@ function App() {
     <>
       <NavBar />
       <img src={IMG1}
+      alt={"image de font"}
         style={{
           width: '100%',
           height: 300,
