@@ -10,7 +10,7 @@ function ContactForm(props) {
         <Card style={{
             marginBottom: 10,
             marginTop: 20,
-            width: '90%',
+            width: '100%',
         }}>
             <CardContent>
                 <form>
