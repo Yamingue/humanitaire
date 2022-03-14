@@ -28,7 +28,7 @@ export default function PersonCard({nom='Yamingue kingatal'}) {
         <CardMedia
           className={classes.media}
           image={IMG}
-          title={nom}
+          title={'personnel image'}
         />
         <CardContent style={{
             justifyContent:'center',
