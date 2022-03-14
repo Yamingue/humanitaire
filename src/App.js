@@ -4,6 +4,7 @@ import Titre from "./Component/Titre";
 import PersonCard from "./Component/PersonCard";
 import { Container, Grid } from "@material-ui/core";
 import Mission from "./Component/Mission";
+import ContactForm from "./Component/ContactForm";
 
 function App() {
   return (
@@ -95,7 +96,8 @@ function App() {
             <PersonCard nom="Ismael djekale" />
           </Grid>
         </Grid>
-
+        <Titre text="Contact" id="contact" size={90} />
+        <ContactForm />
       </Container>
     </>
   );
