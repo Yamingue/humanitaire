@@ -29,16 +29,16 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography style={{color:'#000000'}} variant="h5">
+                            <Typography style={{color:'#000000'}} variant="h6">
                                 Localisation
                             </Typography>
-                            <Typography>
-                                Ndjamena avenue x
+                            <Typography variant='subtitle2' >
+                                Ndjamena avenue xy
                             </Typography>
-                            <Typography>
+                            <Typography variant='subtitle2'>
                                 BP 149
                             </Typography>
-                            <Typography>
+                            <Typography variant='subtitle2'>
                             Rue 2222 df
                             </Typography>
 
@@ -49,7 +49,7 @@ export default function Footer() {
                             sm={4}
 
                         >
-                            <Typography style={{color:'#000000'}} color='inherit' variant="h5">
+                            <Typography style={{color:'#000000'}} color='inherit' variant="h6">
                                 Réseaux sociaux
                             </Typography>
                             <Grid
@@ -74,13 +74,13 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography style={{color:'#000000'}} color='inherit' variant="h5">
+                            <Typography style={{color:'#000000'}} color='inherit' variant="h6">
                                 Contact
                             </Typography>
-                            <Typography>
+                            <Typography variant='subtitle2'>
                                 email@ex.com
                             </Typography>
-                            <Typography>
+                            <Typography variant='subtitle2'>
                                 66 00 66 00
                             </Typography>
                         </Grid>
