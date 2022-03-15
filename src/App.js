@@ -23,7 +23,7 @@ function App() {
 
       <Container
         style={{
-          marginBottom: 224
+          marginBottom: 10
         }}
       >
         <Titre text="Préambule" />
