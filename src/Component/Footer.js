@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { Grid, Icon, IconButton, Typography } from '@material-ui/core';
+import { Grid, Icon, IconButton, Link, Typography } from '@material-ui/core';
 import { Instagram, Twitter } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,7 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography style={{color:'#000000'}} variant="h6">
+                            <Typography style={{ color: '#000000' }} variant="h6">
                                 Localisation
                             </Typography>
                             <Typography variant='subtitle2' >
@@ -39,7 +39,7 @@ export default function Footer() {
                                 BP 149
                             </Typography>
                             <Typography variant='subtitle2'>
-                            Rue 2222 df
+                                Rue 2222 df
                             </Typography>
 
                         </Grid>
@@ -49,7 +49,7 @@ export default function Footer() {
                             sm={4}
 
                         >
-                            <Typography style={{color:'#000000'}} color='inherit' variant="h6">
+                            <Typography style={{ color: '#000000' }} color='inherit' variant="h6">
                                 Réseaux sociaux
                             </Typography>
                             <Grid
@@ -74,7 +74,7 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography style={{color:'#000000'}} color='inherit' variant="h6">
+                            <Typography style={{ color: '#000000' }} color='inherit' variant="h6">
                                 Contact
                             </Typography>
                             <Typography variant='subtitle2'>
@@ -83,6 +83,20 @@ export default function Footer() {
                             <Typography variant='subtitle2'>
                                 66 00 66 00
                             </Typography>
+                        </Grid>
+                    </Grid>
+                </Toolbar>
+                <Toolbar 
+                style={{
+                    backgroundColor:'#373E40'
+                }}
+                >
+                    <Grid container >
+                        <Grid xs={6}>
+                        ©2022 
+                        </Grid>
+                        <Grid xs={6}>
+                           Humanitaire
                         </Grid>
                     </Grid>
                 </Toolbar>
