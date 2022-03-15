@@ -1,5 +1,4 @@
 import NavBar from "./Component/NavBar";
-import IMG1 from './assets/1.jpg'
 import Titre from "./Component/Titre";
 import PersonCard from "./Component/PersonCard";
 import { Card, CardContent, Container, Grid, Typography } from "@material-ui/core";
