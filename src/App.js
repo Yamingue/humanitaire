@@ -50,7 +50,7 @@ function App() {
         <Titre text="Préambule" />
         <Card>
           <CardContent>
-            <Typography>
+            <Typography variant='subtitle2' >
               La position géopolitique du Tchad le place au carrefour de multiples pôles de crises climatique et sécuritaires régionaux affectant sa population, surtout celles vivants dans les localités frontalières et difficiles d’accès. Cette position qui confère au pays un rôle de partenaire de première importance pour assurer la stabilité sécuritaire dans la région n’est pas sans conséquence sur la vie sociale au niveau interne. En effet,  cette sûreté exige l´adoption d´une approche intégrée axée sur les notions interconnectées de la paix, de la sécurité humaine et environnementale, de la sécurité économique (moyens de subsistances) et alimentaire, l’accès à l’éducation, bref de la protection sociale.
               Ces défis sociétaux, induits par des crises humanitaires, ont des contours aussi multiples que variés qui peuvent être appréhendés par la recherche scientifique.  Il n’est pas superflu de rappeler la place de choix qu’occupe la recherche dans tout processus de développement humain.
               Il est donc nécessaire et judicieux que le Tchad soit doté d’une structure de recherche capable l’aider à s’inscrire dans ce processus global qu’est la promotion de la recherche scientifique et surtout la recherche orientée vers le l’humanitaire.
@@ -145,8 +145,6 @@ function App() {
             <Realisation />
           </Grid>
         </Grid>
-        <Titre text="Contact" id="contact" size={90} />
-        <ContactForm />
         <Titre text="Adhesion" id="adhesion" size={105} />
         <AdhesionForm />
       </Container>

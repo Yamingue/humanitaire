@@ -1,15 +1,25 @@
-export default function Titre({ text='Nos missions', size = '160px', id = '#' }) {
-  return <div
+import { Grid, Typography } from "@material-ui/core";
+
+export default function Titre({ text = 'Nos missions', size = '160px', id = '#' }) {
+  return <Grid
     id={id}
+    container
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
     style={{
-      fontSize: 25,
-      fontWeight: 'bold',
-      margin: '0 auto',
-      borderBottom: ' 3px solid blue',
-      textAlign: 'center',
-      maxWidth: size,
-      marginTop: 5
+      marginTop: 5,
+      marginBottom: 10
     }}>
-    {text}
-  </div>
+    <Grid
+      style={{
+        borderBottom: '3px solid blue',
+      }}
+      item>
+      <Typography variant='h5' >
+        {text}
+      </Typography>
+    </Grid>
+
+  </Grid>
 }
