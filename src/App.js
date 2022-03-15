@@ -8,7 +8,28 @@ import ContactForm from "./Component/ContactForm";
 import AdhesionForm from "./Component/AdhesionForm";
 import Footer from "./Component/Footer";
 import Realisation from "./Component/Realisation";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 function App() {
   return (
     <>
@@ -71,50 +92,21 @@ function App() {
           </Grid>
         </Grid>
         <Titre text="Notre équipe" id="equipe" size={140} />
-        <Grid
-          container
-          spacing={2}
-          direction="row"
-          alignItems="center"
-          style={{
-            marginTop: 10
-          }}>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <PersonCard nom="Frank kingatal" />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <PersonCard nom="Kagro valery" />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <PersonCard nom="Joehn Doe" />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <PersonCard nom="Janette Doe" />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <PersonCard nom="Ismael djekale" />
-          </Grid>
-        </Grid>
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlay={true}
+          keyBoardControl={true}
+        >
+          <PersonCard nom="Kagro Doe" />
+          <PersonCard nom="Yamingue Doe" />
+          <PersonCard nom="kingatal Doe" />
+          <PersonCard nom="Joehn Doe" />
+          <PersonCard nom="valdo Doe" />
+        </Carousel>;
         <Titre text="Nos Réalisation" size={170} id='realisation' />
         <Grid
           container

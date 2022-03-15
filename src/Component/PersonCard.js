@@ -9,7 +9,8 @@ import IMG from '../assets/1.jpg'
 
 const useStyles = makeStyles({
   root: {
-      paddingTop:15
+      paddingTop:15,
+      margin:10
   },
   media: {
     height: 140,

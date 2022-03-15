@@ -60,10 +60,10 @@ export default function Footer() {
                                     <Icon>facebook</Icon>
                                 </IconButton>
                                 <IconButton aria-label="delete" color='inherit'>
-                                    <Instagram color='wite' />
+                                    <Instagram color='inherit' />
                                 </IconButton>
                                 <IconButton aria-label="delete" color='inherit'>
-                                    <Twitter color='wite' />
+                                    <Twitter color='inherit' />
                                 </IconButton>
 
                             </Grid>
