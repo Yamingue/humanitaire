@@ -9,6 +9,7 @@ import Footer from "./Component/Footer";
 import Realisation from "./Component/Realisation";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Banner from "./Component/Banner";
 
 const responsive = {
   superLargeDesktop: {
@@ -33,13 +34,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <img src={IMG1}
-        alt={"humanitaire"}
-        style={{
-          width: '100%',
-          height: 300,
-          objectFit: 'cover'
-        }} />
+      <Banner />
 
       <Container
         style={{
