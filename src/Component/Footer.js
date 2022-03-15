@@ -29,7 +29,7 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography color='inherit' variant="h5">
+                            <Typography style={{color:'#000000'}} variant="h5">
                                 Localisation
                             </Typography>
                             <Typography>
@@ -37,6 +37,9 @@ export default function Footer() {
                             </Typography>
                             <Typography>
                                 BP 149
+                            </Typography>
+                            <Typography>
+                            Rue 2222 df
                             </Typography>
 
                         </Grid>
@@ -46,7 +49,7 @@ export default function Footer() {
                             sm={4}
 
                         >
-                            <Typography color='inherit' variant="h5">
+                            <Typography style={{color:'#000000'}} color='inherit' variant="h5">
                                 Réseaux sociaux
                             </Typography>
                             <Grid
@@ -71,7 +74,7 @@ export default function Footer() {
                             md={4}
                             sm={4}
                         >
-                            <Typography color='inherit' variant="h5">
+                            <Typography style={{color:'#000000'}} color='inherit' variant="h5">
                                 Contact
                             </Typography>
                             <Typography>

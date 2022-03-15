@@ -37,7 +37,7 @@ export default function NavBar() {
                         <Button color="inherit">Equipe</Button>
                     </Link>
     
-                    <Link color='inherit' href='/'>
+                    <Link color='inherit' href='/#realisation'>
                         <Button color="inherit">Réalisation</Button>
                     </Link>
                     <Link color='inherit' href='/#contact'>
