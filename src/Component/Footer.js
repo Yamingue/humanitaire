@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { Grid, Icon, IconButton, Link, Typography } from '@material-ui/core';
+import { Grid, Icon, IconButton, Typography } from '@material-ui/core';
 import { Instagram, Twitter } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({

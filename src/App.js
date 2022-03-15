@@ -4,7 +4,6 @@ import Titre from "./Component/Titre";
 import PersonCard from "./Component/PersonCard";
 import { Card, CardContent, Container, Grid, Typography } from "@material-ui/core";
 import Mission from "./Component/Mission";
-import ContactForm from "./Component/ContactForm";
 import AdhesionForm from "./Component/AdhesionForm";
 import Footer from "./Component/Footer";
 import Realisation from "./Component/Realisation";
