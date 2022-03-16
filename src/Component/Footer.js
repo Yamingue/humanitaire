@@ -30,7 +30,7 @@ export default function Footer() {
                             sm={4}
                         >
                             <Typography style={{ color: '#000000' }} variant="h6">
-                                Localisation
+                                Adresse
                             </Typography>
                             <Typography variant='subtitle2' >
                                 Ndjamena avenue xy
@@ -50,7 +50,7 @@ export default function Footer() {
 
                         >
                             <Typography style={{ color: '#000000' }} color='inherit' variant="h6">
-                                Réseaux sociaux
+                                Social
                             </Typography>
                             <Grid
                                 direction="row"
