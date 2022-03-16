@@ -96,7 +96,7 @@ export default function Footer() {
                         ©2022 
                         </Grid>
                         <Grid xs={6}>
-                           Humanitaire
+                          Recherche Humanitaire
                         </Grid>
                     </Grid>
                 </Toolbar>

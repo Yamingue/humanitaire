@@ -40,7 +40,7 @@ function App() {
           marginBottom: 10
         }}
       >
-        <Titre text="Préambule" />
+        <Titre text="A propos" />
         <Card>
           <CardContent>
             <Typography variant='subtitle2' >
@@ -100,7 +100,7 @@ function App() {
           <PersonCard nom="Joehn Doe" />
           <PersonCard nom="valdo Doe" />
         </Carousel>;
-        <Titre text="Nos Réalisation" size={170} id='realisation' />
+        <Titre text="Activités" size={170} id='activite' />
         <Grid
           container
           spacing={2}
