@@ -70,21 +70,21 @@ function App() {
             xs={12}
             md={3}
           >
-            <Mission text="Mission A" />
+            <Mission text="Mission A" image={IMG1}/>
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Mission text="Mission B" />
+            <Mission text="Mission B" image={IMG2} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Mission text="Mission C" />
+            <Mission text="Mission C" image={IMG3}/>
           </Grid>
         </Grid>
         <Titre text="Notre équipe" id="equipe" size={140} />

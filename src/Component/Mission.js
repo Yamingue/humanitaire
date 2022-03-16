@@ -23,7 +23,7 @@ export default function Mission({text='Mission M',image={IMG2}}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={IMG2}
+          image={image}
           title="Contemplative Reptile"
         />
         <CardContent>
