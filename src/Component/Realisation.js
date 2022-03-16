@@ -28,7 +28,7 @@ export default function Realisation() {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Realisation X
+                    Activité X
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging

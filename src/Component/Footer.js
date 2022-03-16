@@ -25,7 +25,7 @@ export default function Footer() {
                         justifyContent='space-between'
                     >
                         <Grid item
-                            xs={12}
+                            xs={4}
                             md={4}
                             sm={4}
                         >
@@ -44,7 +44,7 @@ export default function Footer() {
 
                         </Grid>
                         <Grid item
-                            xs={12}
+                            xs={4}
                             md={4}
                             sm={4}
 
@@ -70,7 +70,7 @@ export default function Footer() {
 
                         </Grid>
                         <Grid item
-                            xs={12}
+                            xs={4}
                             md={4}
                             sm={4}
                         >
