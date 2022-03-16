@@ -100,7 +100,7 @@ function App() {
           <PersonCard nom="Joehn Doe" />
           <PersonCard nom="valdo Doe" />
         </Carousel>;
-        <Titre text="Activités" size={170} id='activite' />
+        <Titre text="Nos activités" size={170} id='activite' />
         <Grid
           container
           spacing={2}
