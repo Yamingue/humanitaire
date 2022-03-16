@@ -117,28 +117,28 @@ function App() {
             xs={12}
             md={3}
           >
-            <Realisation text="Realisation 1" image={IMG2} />
+            <Realisation text="Activités 1" image={IMG2} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation text="Realisation 2" image={IMG1} />
+            <Realisation text="Activités  2" image={IMG1} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation text="Realisation 3" image={IMG3} />
+            <Realisation text="Activités  3" image={IMG3} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation text="Realisation 4" image={IMG1} />
+            <Realisation text="Activités  4" image={IMG1} />
           </Grid>
         </Grid>
         <Titre text="Adhesion" id="adhesion" size={105} />

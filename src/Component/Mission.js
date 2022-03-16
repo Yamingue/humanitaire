@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Mission() {
+export default function Mission({text='Mission M',image={IMG2}}) {
   const classes = useStyles();
 
   return (
@@ -28,7 +28,7 @@ export default function Mission() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Mission A
+            {text}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
