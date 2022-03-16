@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Realisation() {
+export default function Realisation({text="ACtivite x",image=IMG2}) {
     const classes = useStyles();
 
     return (
@@ -23,12 +23,12 @@ export default function Realisation() {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image={IMG2}
+                    image={image}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                    Activité X
+                    {text}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging

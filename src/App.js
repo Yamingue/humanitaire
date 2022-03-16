@@ -9,6 +9,9 @@ import Realisation from "./Component/Realisation";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Banner from "./Component/Banner";
+import IMG1 from './assets/1.jpg'
+import IMG2 from './assets/2.jpg'
+import IMG3 from './assets/3.jpg'
 
 const responsive = {
   superLargeDesktop: {
@@ -114,28 +117,28 @@ function App() {
             xs={12}
             md={3}
           >
-            <Realisation />
+            <Realisation text="Realisation 1" image={IMG2} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation />
+            <Realisation text="Realisation 2" image={IMG1} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation />
+            <Realisation text="Realisation 3" image={IMG3} />
           </Grid>
           <Grid item
             sm={4}
             xs={12}
             md={3}
           >
-            <Realisation />
+            <Realisation text="Realisation 4" image={IMG1} />
           </Grid>
         </Grid>
         <Titre text="Adhesion" id="adhesion" size={105} />
