@@ -6,14 +6,14 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCYT_fZDSmNvyIKQw_aV08zLiWcu6DgVGE",
-  authDomain: "recherche-d38d8.firebaseapp.com",
-  projectId: "recherche-d38d8",
-  storageBucket: "recherche-d38d8.appspot.com",
-  messagingSenderId: "833968058377",
-  appId: "1:833968058377:web:6cd86d8618c08505b1c8d8",
-  measurementId: "G-V3RY2PM16Y"
-};
+    apiKey: "AIzaSyDm1s2UtqlDKY2QeshyZuxHERzGQTw250w",
+    authDomain: "recherche-d484c.firebaseapp.com",
+    projectId: "recherche-d484c",
+    storageBucket: "recherche-d484c.appspot.com",
+    messagingSenderId: "101428087056",
+    appId: "1:101428087056:web:e923e018ab31ca58d8fd95",
+    measurementId: "G-WCQPEWDLC9"
+  };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);

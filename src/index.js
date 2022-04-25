@@ -3,19 +3,21 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Admin from './pages/admin';
 import reportWebVitals from './reportWebVitals';
+import Mission from './pages/admin/Mission'
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
+import Activity from './pages/admin/Activity';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/admin' element={<Admin />} />
-        <Route path='/admin/mission' element={<Admin />} />
-        <Route path='/admin/activite' element={<Admin />} />
+        <Route path='/admin/mission' element={<Mission />} />
+        <Route path='/admin/activite' element={<Activity />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
