@@ -80,7 +80,7 @@ export default function MissionTable({ data }) {
               </StyledTableCell>
               <StyledTableCell align="right">
                 <IconButton color='secondary' onClick={e=>{
-                  remove(ref(database,'/activity/'+row.id)).then(data=>{
+                  remove(ref(database,'/mission/'+row.id)).then(data=>{
                     console.log(data)
                   })
                 }}>
