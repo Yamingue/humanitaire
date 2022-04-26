@@ -50,7 +50,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MissionTable({ data }) {
+export default function ActivityTable({ data }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [url, setUrl] = useState('')

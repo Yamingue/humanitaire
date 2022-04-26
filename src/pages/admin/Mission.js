@@ -1,8 +1,14 @@
 import { Button, Card, CardContent, Input, TextField, Typography } from "@material-ui/core";
 import { Image as ImageIcon } from "@material-ui/icons";
+import { getDatabase } from "firebase/database";
+import { getStorage } from "firebase/storage";
 import React from "react";
 import Layout from "../../Component/Layout";
 import MissionTable from "../../Component/MissionsTable";
+import firebaseApp from "../../functions/firebase";
+
+const database = getDatabase(firebaseApp);
+const storage = getStorage(firebaseApp);
 
 
 export default function Mission(props){
@@ -21,6 +27,6 @@ export default function Mission(props){
                     </Button>
             </CardContent>
         </Card>
-        <MissionTable />
+        {/* <MissionTable /> */}
     </Layout>
 }

@@ -1,9 +1,9 @@
 import { Button, Card, CardContent, TextField, Typography } from "@material-ui/core";
 import { Image as ImageIcon } from "@material-ui/icons";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "../../Component/Layout";
-import MissionTable from "../../Component/MissionsTable";
-import { getDatabase, ref, push, onValue, get } from 'firebase/database'
+import ActivityTable from "../../Component/ActivityTable";
+import { getDatabase, ref, push, onValue } from 'firebase/database'
 import { getStorage, ref as refStorage, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import firebaseApp from "../../functions/firebase";
 import SaveIcon from '@material-ui/icons/Save';
@@ -18,9 +18,32 @@ export default function Activity(props) {
     const [description, setDes] = useState('short description')
     const fileRef = useRef();
     const [activities, setActivity] = useState([])
+    useEffect(()=>{
+        onValue(ref(database,'/activity'),snap=>{
+            let s= snap.toJSON()
+            let arr = []
+            for (const key in s) {
+                const element = s[key];
+                element['id']=key
+                arr.push(element)
+            }
+            setActivity(arr)
+        })
+        // get(ref(database,'/activity')).then(snap=>{
+        //     let s= snap.toJSON()
+        //     let arr = []
+        //     for (const key in s) {
+        //         const element = s[key];
+        //         element['id']=key
+        //         arr.push(element)
+        //     }
+        //     setActivity(arr)
+        // })
+    },[])
     const save =()=>{
         let file = fileRef.current.files[0];
         if (libelet.trim()!==''&& description.trim()!=='' && file) {
+            console.log('start sending');
             let storageRef = refStorage(storage,((new Date()).getTime()).toString());
             let task = uploadBytesResumable(storageRef,file)
             task.on('state_changed',snap=>{
@@ -28,6 +51,8 @@ export default function Activity(props) {
             },e=>{
                 console.log(e)
             },()=>{
+                console.log('File available at');
+            
                 getDownloadURL(task.snapshot.ref).then((downloadURL) => {
                     push(ref(database,'/activity'),{
                         image:downloadURL,
@@ -40,26 +65,7 @@ export default function Activity(props) {
         }
     }
 
-    // onValue(ref(database,'/activity'),snap=>{
-    //     let s= snap.toJSON()
-    //     let arr = []
-    //     for (const key in s) {
-    //         const element = s[key];
-    //         element['id']=key
-    //         arr.push(element)
-    //     }
-    //     setActivity(arr)
-    // })
-    get(ref(database,'/activity')).then(snap=>{
-        let s= snap.toJSON()
-        let arr = []
-        for (const key in s) {
-            const element = s[key];
-            element['id']=key
-            arr.push(element)
-        }
-        setActivity(arr)
-    })
+    
 
     return <Layout>
         <Card style={{ marginBottom: '15px' }}>
@@ -78,6 +84,6 @@ export default function Activity(props) {
                 </Button>
             </CardContent>
         </Card>
-        <MissionTable data={activities} />
+        <ActivityTable data={activities} />
     </Layout>
 }
