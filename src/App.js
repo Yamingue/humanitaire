@@ -69,7 +69,6 @@ function App() {
         arr.push(element)
       }
       setMission(arr)
-      console.log(arr)
     })
     onValue(ref(database,'/apropos'),snap=>{
       let s= snap.toJSON()

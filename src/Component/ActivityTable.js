@@ -56,7 +56,7 @@ export default function ActivityTable({ data }) {
   const [url, setUrl] = useState('')
   return (<>
     <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
+      <Table aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Libelet </StyledTableCell>

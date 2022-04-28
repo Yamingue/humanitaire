@@ -47,7 +47,7 @@ export default function EquipeTable({ data }) {
 
   return <>
     <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
+      <Table  aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Nom </StyledTableCell>
