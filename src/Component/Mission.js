@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import IMG2 from '../assets/2.jpg'
 
 const useStyles = makeStyles({
   root: {
@@ -15,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Mission({text='Mission M',image={IMG2}}) {
+export default function Mission({data}) {
   const classes = useStyles();
 
   return (
@@ -23,16 +22,17 @@ export default function Mission({text='Mission M',image={IMG2}}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={image}
+          image={data.image}
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {text}
+            {data.libelet}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {
+              data.description
+            }
           </Typography>
         </CardContent>
       </CardActionArea>

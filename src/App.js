@@ -9,9 +9,6 @@ import Realisation from "./Component/Realisation";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Banner from "./Component/Banner";
-import IMG1 from './assets/1.jpg'
-import IMG2 from './assets/2.jpg'
-import IMG3 from './assets/3.jpg'
 import { useEffect, useState } from "react";
 import { getDatabase, onValue, ref } from "firebase/database";
 import firebaseApp from "./functions/firebase";
@@ -39,6 +36,7 @@ const responsive = {
 function App() {
   const [team, setTeam] = useState([])
   const [activity, setActivity] = useState([])
+  const [mission, setMission] = useState([])
 
   useEffect(() => {
     onValue(ref(database, '/team'), snap => {
@@ -60,6 +58,16 @@ function App() {
         arr.push(element)
       }
       setActivity(arr)
+    })
+    onValue(ref(database, '/mission'), snap => {
+      let s = snap.toJSON()
+      let arr = []
+      for (const key in s) {
+        const element = s[key];
+        element['id'] = key
+        arr.push(element)
+      }
+      setMission(arr)
       console.log(arr)
     })
   }, [])
@@ -95,27 +103,16 @@ function App() {
           style={{
             marginTop: 10
           }}>
-          <Grid item
+         {
+           mission.map(el=> <Grid item
             sm={4}
             xs={12}
             md={3}
+            key={el.id}
           >
-            <Mission text="Mission A" image={IMG1} />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <Mission text="Mission B" image={IMG2} />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <Mission text="Mission C" image={IMG3} />
-          </Grid>
+            <Mission data={el} text="Mission A" />
+          </Grid>)
+         }
         </Grid>
         <Titre text="Notre équipe" id="equipe" size={140} />
         <Carousel
