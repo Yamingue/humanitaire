@@ -12,6 +12,10 @@ import Banner from "./Component/Banner";
 import IMG1 from './assets/1.jpg'
 import IMG2 from './assets/2.jpg'
 import IMG3 from './assets/3.jpg'
+import { useEffect, useState } from "react";
+import { getDatabase, onValue, ref } from "firebase/database";
+import firebaseApp from "./functions/firebase";
+const database = getDatabase(firebaseApp);
 
 const responsive = {
   superLargeDesktop: {
@@ -33,6 +37,22 @@ const responsive = {
   }
 };
 function App() {
+  const [team, setTeam] = useState([])
+  const [activity, setActivity] = useState([])
+
+  useEffect(() => {
+    onValue(ref(database, '/team'), snap => {
+      let s = snap.toJSON()
+      let arr = []
+      for (const key in s) {
+        const element = s[key];
+        element['id'] = key
+        arr.push(element)
+      }
+      setTeam(arr)
+      console.log(arr)
+    })
+  }, [])
   return (
     <>
       <NavBar />
@@ -70,7 +90,7 @@ function App() {
             xs={12}
             md={3}
           >
-            <Mission text="Mission A" image={IMG1}/>
+            <Mission text="Mission A" image={IMG1} />
           </Grid>
           <Grid item
             sm={4}
@@ -84,7 +104,7 @@ function App() {
             xs={12}
             md={3}
           >
-            <Mission text="Mission C" image={IMG3}/>
+            <Mission text="Mission C" image={IMG3} />
           </Grid>
         </Grid>
         <Titre text="Notre équipe" id="equipe" size={140} />
@@ -97,11 +117,9 @@ function App() {
           autoPlay={true}
           keyBoardControl={true}
         >
-          <PersonCard nom="Kagro Doe" />
-          <PersonCard nom="Yamingue Doe" />
-          <PersonCard nom="kingatal Doe" />
-          <PersonCard nom="Joehn Doe" />
-          <PersonCard nom="valdo Doe" />
+          {
+           team.map(el=><PersonCard data={el} key={el.id} />)
+          }
         </Carousel>;
         <Titre text="Nos activités" size={170} id='activite' />
         <Grid

@@ -9,39 +9,44 @@ import IMG from '../assets/1.jpg'
 
 const useStyles = makeStyles({
   root: {
-      paddingTop:15,
-      margin:10
+    paddingTop: 15,
+    margin: 10
   },
   media: {
     height: 140,
     width: 140,
-    borderRadius:140/2,
-    margin:' 0 auto'
+    borderRadius: 140 / 2,
+    margin: ' 0 auto'
   },
 });
 
-export default function PersonCard({nom='Yamingue kingatal'}) {
+export default function PersonCard({ data }) {
   const classes = useStyles();
+  console.log(data)
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={IMG}
+          image={data.image}
           title={'personnel image'}
         />
         <CardContent style={{
-            justifyContent:'center',
-            display:'flex',
-            flexDirection:'column',
-            textAlign:'center'
+          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          textAlign: 'center'
         }}>
           <Typography gutterBottom variant="h6" component="h2">
-            {nom}
+            {
+              data.nom
+            }
           </Typography>
           <Typography color="textSecondary" component="p">
-                Developpeur Web
+            {
+               data.titre
+            }
           </Typography>
         </CardContent>
       </CardActionArea>
