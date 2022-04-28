@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, TextField, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, CardHeader, TextField, Typography } from "@material-ui/core";
 import { Image as ImageIcon } from "@material-ui/icons";
 import React, { useEffect, useRef, useState } from "react";
 import EquipeTable from "../Component/EquipeTable";
@@ -61,6 +61,9 @@ export default function Admin(props) {
 
     return <Layout>
         <Card style={{ marginBottom: '15px' }}>
+            <CardHeader
+             title="Gestion de la team"
+            />
             <CardContent>
                 <TextField onChange={e => setNom(e.target.value)} value={nom} margin='dense' variant='outlined' label='Nom complet' fullWidth />
                 <TextField onChange={e => setFunction(e.target.value)} value={titre} margin='dense' variant='outlined' label='Function' fullWidth />

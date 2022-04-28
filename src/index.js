@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Activity from './pages/admin/Activity';
+import Informtion from './pages/admin/Information';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path='/admin' element={<Admin />} />
         <Route path='/admin/mission' element={<Mission />} />
         <Route path='/admin/activite' element={<Activity />} />
+        <Route path='/admin/setting' element={<Informtion />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

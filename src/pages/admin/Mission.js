@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, TextField, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, CardHeader, TextField, Typography } from "@material-ui/core";
 import { Image as ImageIcon } from "@material-ui/icons";
 import React, { useEffect, useRef, useState } from "react";
 import Layout from "../../Component/Layout";
@@ -59,6 +59,9 @@ export default function MIssion(props) {
 
     return <Layout>
         <Card style={{ marginBottom: '15px' }}>
+        <CardHeader
+             title="Gestion des Missions"
+            />
             <CardContent>
                 <TextField onChange={e => setLibelet(e.target.value)} value={libelet} margin='dense' variant='outlined' label='Libelet' fullWidth />
                 <TextField onChange={e => setDes(e.target.value)} value={description} multiline minRows={4} type={'text'} margin='dense' variant='outlined' label='Description' fullWidth />

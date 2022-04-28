@@ -18,6 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import PersonIcon from '@material-ui/icons/Person';
 import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import SettingsIcon from '@material-ui/icons/Settings';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -159,6 +160,12 @@ export default function Layout(props) {
                         <ListItem button >
                             <ListItemIcon><LocalActivityIcon /></ListItemIcon>
                             <ListItemText primary={"Activitées"} />
+                        </ListItem>
+                    </Link>
+                    <Link to='/admin/setting'>
+                        <ListItem button >
+                            <ListItemIcon><SettingsIcon /></ListItemIcon>
+                            <ListItemText primary={"Parametre"} />
                         </ListItem>
                     </Link>
                 </List>
