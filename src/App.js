@@ -50,6 +50,16 @@ function App() {
         arr.push(element)
       }
       setTeam(arr)
+    })
+    onValue(ref(database, '/activity'), snap => {
+      let s = snap.toJSON()
+      let arr = []
+      for (const key in s) {
+        const element = s[key];
+        element['id'] = key
+        arr.push(element)
+      }
+      setActivity(arr)
       console.log(arr)
     })
   }, [])
@@ -130,34 +140,17 @@ function App() {
           style={{
             marginTop: 10
           }}>
-          <Grid item
+          
+         {
+           activity.map(el=> <Grid item
             sm={4}
             xs={12}
             md={3}
+            key={el.id}
           >
-            <Realisation text="Activités 1" image={IMG2} />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <Realisation text="Activités  2" image={IMG1} />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <Realisation text="Activités  3" image={IMG3} />
-          </Grid>
-          <Grid item
-            sm={4}
-            xs={12}
-            md={3}
-          >
-            <Realisation text="Activités  4" image={IMG1} />
-          </Grid>
+            <Realisation data={el} />
+          </Grid>)
+         }
         </Grid>
         <Titre text="Adhesion" id="adhesion" size={105} />
         <AdhesionForm />

@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import IMG from '../assets/1.jpg'
 
 const useStyles = makeStyles({
   root: {
@@ -22,7 +21,6 @@ const useStyles = makeStyles({
 
 export default function PersonCard({ data }) {
   const classes = useStyles();
-  console.log(data)
 
   return (
     <Card className={classes.root}>
