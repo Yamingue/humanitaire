@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@material-ui/core";
+import Colors from "../Colors/Color";
 
 export default function Titre({ text = 'Nos missions', size = '160px', id = '#' }) {
   return <Grid
@@ -13,7 +14,7 @@ export default function Titre({ text = 'Nos missions', size = '160px', id = '#' 
     }}>
     <Grid
       style={{
-        borderBottom: '3px solid blue',
+        borderBottom: '3px solid '+Colors.secondary,
       }}
       item>
       <Typography variant='h5' >

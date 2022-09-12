@@ -4,10 +4,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { Link } from '@material-ui/core';
+import Colors from '../Colors/Color';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        backgroundColor:Colors.primary
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -22,8 +24,8 @@ export default function NavBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed">
-                <Toolbar>
+            <AppBar style={{backgroundColor:Colors.primary}} position="fixed"  >
+                <Toolbar >
                     {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
@@ -40,8 +42,8 @@ export default function NavBar() {
                     <Link color='inherit' href='/#activite'>
                         <Button color="inherit">Activités</Button>
                     </Link>
-                    <Link color='inherit' href='/#adhesion'>
-                        <Button color="inherit">Adhésion</Button>
+                    <Link color='inherit' href='/#contactus'>
+                        <Button color="inherit">Nous contacter</Button>
                     </Link>
                 </Toolbar>
             </AppBar>

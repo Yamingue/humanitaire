@@ -4,12 +4,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Grid, Icon, IconButton, Typography } from '@material-ui/core';
 import { Instagram, Twitter } from '@material-ui/icons';
+import Colors from '../Colors/Color';
 
 const useStyles = makeStyles((theme) => ({
 
     appBar: {
         top: 'auto',
         bottom: 0,
+        backgroundColor:Colors.primary
     }
 }));
 export default function Footer() {

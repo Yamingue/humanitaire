@@ -107,7 +107,7 @@ export default function Banner() {
                         }}
                     />
                     <span className={classes.imageBackdrop} />
-                    <a href='/#adhesion' className={classes.imageButton}>
+                    <a href='/#contactus' className={classes.imageButton}>
                         <Typography
                             component="span"
                             variant="subtitle1"

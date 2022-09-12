@@ -1,14 +1,15 @@
 import { Button, Card, CardContent, Grid, Icon, TextField } from "@material-ui/core";
 import { getDatabase, ref, push } from 'firebase/database'
 import { useState } from "react";
+import Colors from "../Colors/Color";
 import firebaseApp from "../functions/firebase";
 
 const database = getDatabase(firebaseApp)
 function AdhesionForm(props) {
-    const [nom,setNom] = useState('yam')
-    const [email,setMail] = useState('yamking01@gmail.com')
-    const [ville,setVille] = useState('Sarh')
-    const [cmt,setCmt] = useState('je plaide pour une adhesion')
+    const [nom,setNom] = useState('')
+    const [email,setMail] = useState('')
+    const [ville,setVille] = useState('')
+    const [cmt,setCmt] = useState('')
 
     const send=(e)=>{
          push(ref(database,'/adhesion'),{
@@ -31,13 +32,13 @@ function AdhesionForm(props) {
         }}>
             <CardContent>
                 <form>
-                    <TextField value={nom} onChange={e=>setNom(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Nom Complet" />
-                    <TextField value={email} type='email' onChange={e=>setMail(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Email ou telephone" />
-                    <TextField value={ville} onChange={e=>setVille(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Ville" />
-                    <TextField value={cmt} onChange={e=>setCmt(e.target.value)} multiline minRows={4} type={'text'} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Commentaire" />
+                    <TextField color='secondary' value={nom} onChange={e=>setNom(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Nom Complet" />
+                    <TextField color='secondary' value={email} type='email' onChange={e=>setMail(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Email ou telephone" />
+                    <TextField color='secondary' value={ville} onChange={e=>setVille(e.target.value)} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Ville" />
+                    <TextField color='secondary' value={cmt} onChange={e=>setCmt(e.target.value)} multiline minRows={4} type={'text'} style={{ width: '100%', marginBottom: 15 }} variant='outlined' label="Commentaire" />
                     <Button
                         variant="contained"
-                        color="primary"
+                        color='secondary'
                         endIcon={<Icon>send</Icon>}
                         onClick={ev=>{
                             ev.preventDefault()
