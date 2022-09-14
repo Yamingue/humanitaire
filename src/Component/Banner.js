@@ -7,7 +7,7 @@ import IMG from '../assets/1.jpg'
 const images = [
     {
         url: IMG,
-        title: 'Adhesion',
+        title: 'Nous contacter',
         width: '100%',
     },
 ];
