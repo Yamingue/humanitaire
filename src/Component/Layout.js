@@ -20,6 +20,7 @@ import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Link } from 'react-router-dom';
+import Colors from '../Colors/Color';
 
 const drawerWidth = 240;
 
@@ -103,6 +104,7 @@ export default function Layout(props) {
             <CssBaseline />
             <AppBar
                 position="fixed"
+                style={{backgroundColor:Colors.primary2}}
                 className={clsx(classes.appBar, {
                     [classes.appBarShift]: open,
                 })}

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: "auto",
     bottom: 0,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.primary2,
   },
 }));
 export default function Footer() {
@@ -27,9 +27,9 @@ console.log(y)
               <Typography style={{ color: "#000000" }} variant="h6">
                 Adresse
               </Typography>
-              <Typography variant="subtitle2">Ndjamena avenue xy</Typography>
-              <Typography variant="subtitle2">BP 149</Typography>
-              <Typography variant="subtitle2">Rue 2222 df</Typography>
+              <Typography variant="subtitle2">Moundou Quartier Dokab</Typography>
+              <Typography variant="subtitle2">BP 95 </Typography>
+              {/* <Typography variant="subtitle2">Rue 2222 df</Typography> */}
             </Grid>
             <Grid item xs={4} md={4} sm={4}>
               <Typography
@@ -60,7 +60,7 @@ console.log(y)
                 Contact
               </Typography>
               <Typography variant="subtitle2">email@ex.com</Typography>
-              <Typography variant="subtitle2">66 00 66 00</Typography>
+              <Typography variant="subtitle2">66189815/95563495</Typography>
             </Grid>
           </Grid>
         </Toolbar>
