@@ -1,4 +1,5 @@
 import { Button, Card, CardContent, Grid, Icon, TextField } from "@material-ui/core";
+import Colors from "../Colors/Color";
 
 function ContactForm(props) {
     return <Grid
@@ -19,7 +20,9 @@ function ContactForm(props) {
                     <TextField multiline minRows={4} type={'text'} style={{width:'100%', marginBottom:15}} variant='outlined' label="Commentaire"/>
                     <Button
                         variant="contained"
-                        color="primary"
+                        style={{
+                            backgroundColor:Colors.secondary
+                        }}
                         endIcon={<Icon>send</Icon>}
                     >
                         Envoyer

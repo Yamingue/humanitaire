@@ -14,7 +14,7 @@ export default function Titre({ text = 'Nos missions', size = '160px', id = '#' 
     }}>
     <Grid
       style={{
-        borderBottom: '3px solid '+Colors.secondary,
+        borderBottom: '3px solid '+Colors.primary2,
       }}
       item>
       <Typography variant='h5' >
